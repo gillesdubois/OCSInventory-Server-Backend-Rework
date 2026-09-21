@@ -1009,6 +1009,10 @@ paths:
         schema:
           type: integer
       - in: query
+        name: testtest
+        schema:
+          type: string
+      - in: query
         name: uuid
         schema:
           type: string
@@ -7222,6 +7226,10 @@ paths:
         schema:
           type: integer
       - in: query
+        name: testtest
+        schema:
+          type: string
+      - in: query
         name: uuid
         schema:
           type: string
@@ -11749,6 +11757,10 @@ paths:
         name: id
         schema:
           type: integer
+      - in: query
+        name: is_active
+        schema:
+          type: boolean
       - name: limit
         required: false
         in: query
@@ -15051,6 +15063,10 @@ components:
           readOnly: true
         is_template_forced:
           type: boolean
+        testtest:
+          type: string
+          nullable: true
+          maxLength: 255
         matched:
           type: string
           readOnly: true
@@ -17003,6 +17019,10 @@ components:
           readOnly: true
         is_template_forced:
           type: boolean
+        testtest:
+          type: string
+          nullable: true
+          maxLength: 255
         matched:
           type: string
           readOnly: true
@@ -17381,6 +17401,8 @@ components:
             $ref: '#/components/schemas/Field'
         options:
           nullable: true
+        is_active:
+          type: boolean
     PatchedSnmpConfig:
       type: object
       description: This serializer class provide the API representation
@@ -18029,6 +18051,8 @@ components:
             $ref: '#/components/schemas/Field'
         options:
           nullable: true
+        is_active:
+          type: boolean
       required:
       - fields
       - id
